@@ -1,5 +1,5 @@
 const ms = require('ms');
-
+/*rgregregerg*/
 module.exports = {
     name: 'ping',
     aliases: [],
