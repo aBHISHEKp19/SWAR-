@@ -12,17 +12,17 @@ player.on('trackStart', (queue, track) => {
 });
 
 player.on('trackAdd', (queue, track) => {
-    queue.metadata.send(`Track ${track.title} added in the queue ✅`);
+    queue.metadata.send(`Track ${track.title} added in queue ✅`);
 });
 
 player.on('botDisconnect', (queue) => {
-    queue.metadata.send('I was manually disconnected from the voice channel, clearing queue... ❌');
+    queue.metadata.send('Someone disconnected me from voice channel, clearing queue... ❌');
 });
 
 player.on('channelEmpty', (queue) => {
-    queue.metadata.send('Nobody is in the voice channel, leaving the voice channel... ❌');
+    queue.metadata.send('Nobody is in the voice channel, mai chala');
 });
 
 player.on('queueEnd', (queue) => {
-    queue.metadata.send('I finished reading the whole queue ✅');
+    queue.metadata.send('I finished playing the whole queue ✅');
 });
