@@ -1,6 +1,6 @@
 module.exports = {
     app: {
-        px: '!!',
+        px: '>>',
         token: 'OTcyMTY2NTkxNDczMTU2MDk2.G5mTlp.WOrtVCqaAPs6a3QKHaooUIISp_Lv_bGZDno44s',
        // playing: 'by Zerio ❤️'
     },
