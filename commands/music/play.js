@@ -1,5 +1,5 @@
 const { QueryType } = require('discord-player');
-
+const { MessageEmbed } = require('discord.js');
 module.exports = {
     name: 'play',
     aliases: ['p'],
@@ -7,14 +7,24 @@ module.exports = {
     voiceChannel: true,
 
     async execute(client, message, args) {
-        if (!args[0]) return message.channel.send(`Please enter a valid search ${message.author}... try again ? ❌`);
+
+
+
+        const neh = new MessageEmbed()
+        .setColor('#da004e')
+        .setDescription((`${message.author} Please enter a valid search ❌`));
+        
+        if (!args[0]) return message.channel.send({ embeds: [neh] });
 
         const res = await player.search(args.join(' '), {
             requestedBy: message.member,
             searchEngine: QueryType.AUTO
         });
 
-        if (!res || !res.tracks.length) return message.channel.send(`No results found ${message.author}... try again ? ❌`);
+        const hyh = new MessageEmbed()
+        .setColor('#da004e')
+        .setDescription(`No results found ${message.author}... try again ? ❌`);
+        if (!res || !res.tracks.length) return message.channel.send({ embeds: [hyh] });
 
         const queue = await player.createQueue(message.guild, {
             metadata: message.channel
@@ -26,8 +36,10 @@ module.exports = {
             await player.deleteQueue(message.guild.id);
             return message.channel.send(`I can't join the voice channel ${message.author}... try again ? ❌`);
         }
-
-        await message.channel.send(`Loading your ${res.playlist ? 'playlist' : 'track'}... 🎧`);
+        const acv = new MessageEmbed()
+        .setColor('#da004e')
+        .setDescription(`Loading your ${res.playlist ? 'playlist' : 'track'}... 🎧`);
+        await message.channel.send({ embeds: [acv] });
 
         res.playlist ? queue.addTracks(res.tracks) : queue.addTrack(res.tracks[0]);
 

@@ -7,6 +7,10 @@ module.exports = {
     voiceChannel: true,
 
     execute(client, message, args) {
+        const sds = new MessageEmbed()
+        .setColor('#da004e')
+        .setDescription(success ? `The volume has been modified to **${vol}**/**${maxVol}**% 🔊` : `Something went wrong ${message.author}... try again ? ❌`);
+     
         const queue = player.getQueue(message.guild.id);
 
         if (!queue || !queue.playing) return message.channel.send(`No music currently playing ${message.author}... try again ? ❌`);
@@ -21,6 +25,6 @@ module.exports = {
 
         const success = queue.setVolume(vol);
 
-        return message.channel.send(success ? `The volume has been modified to **${vol}**/**${maxVol}**% 🔊` : `Something went wrong ${message.author}... try again ? ❌`);
+        return message.channel.send({ embeds: [ggsx] });
     },
 };
