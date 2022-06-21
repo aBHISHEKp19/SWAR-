@@ -1,5 +1,5 @@
 const maxVol = client.config.opt.maxVol;
-
+const { MessageEmbed } = require('discord.js');
 module.exports = {
     name: 'volume',
     aliases: ['vol'],
