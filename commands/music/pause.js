@@ -1,3 +1,5 @@
+const { DiscordAPIError } = require("discord.js");
+
 module.exports = {
     name: 'pause',
     aliases: [],
@@ -6,6 +8,9 @@ module.exports = {
 
     execute(client, message) {
         const queue = player.getQueue(message.guild.id);
+
+        const llol = new Discord.Messagembed()
+        .setDescription('')
 
         if (!queue) return message.channel.send(`No music currently playing ${message.author}... try again ? ❌`);
 
