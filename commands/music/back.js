@@ -7,9 +7,9 @@ module.exports = {
     async execute(client, message) {
         const queue = player.getQueue(message.guild.id);
 
-        if (!queue || !queue.playing) return message.channel.send(`No music currently playing ${message.author}... try again ? ❌`);
+        if (!queue || !queue.playing) return message.channel.send(`No music currently playing ${message.author}... try again ? <a:No_1:999332118368891010>`);
 
-        if (!queue.previousTracks[1]) return message.channel.send(`There was no music played before ${message.author}... try again ? ❌`);
+        if (!queue.previousTracks[1]) return message.channel.send(`There was no music played before ${message.author}... try again ? <a:No_1:999332118368891010>`);
 
         await queue.back();
 
