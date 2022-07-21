@@ -13,6 +13,6 @@ module.exports = {
         const sfs = new MessageEmbed()
         .setColor('#da004e')
         .setDescription(success ? `Current music ${queue.current.title} resumed<a:swartik:988048652901699584>` : `Something went wrong ${message.author}... try again ? <a:No_1:999332118368891010>`);
-        return message.channel.send({embesds: [sfs]});
+        return message.channel.send({embeds: [sfs]});
     },
 };
