@@ -23,7 +23,7 @@ player.on('trackStart', (queue, track, message) => {
 //.addField('**Requester**',`${message.author.tag}`, true)
 .addField('Duration', `${trackDuration}`, true)
 .setTimestamp()
-.setFooter("Made by appy with love")
+.setFooter("Made by appy")
 .setThumbnail('https://i.pinimg.com/originals/71/21/29/712129d48c17029cfd2bd99bf6a4ee10.gif')
 //.setImage('https://images-ext-2.discordapp.net/external/RbdDCPRH2nNGoJn014CMst8t-p2Pt0vV5Uwr8PYCzHw/https/images-ext-1.discordapp.net/external/4-vz8hiB9HzaMKqpi2oUD0Cx0snxoYMHKvhmxyeTIIY/https/media.discordapp.net/attachments/932610217567473715/946403019489181786/lol.gif');
 
