@@ -1,5 +1,6 @@
 const { QueryType } = require('discord-player');
 const { MessageEmbed } = require('discord.js');
+
 module.exports = {
     name: 'play',
     aliases: ['p'],
@@ -7,7 +8,7 @@ module.exports = {
     voiceChannel: true,
 
     async execute(client, message, args) {
-
+       // const athr = message.author.id;
 
 
         const neh = new MessageEmbed()
@@ -44,5 +45,30 @@ module.exports = {
         res.playlist ? queue.addTracks(res.tracks) : queue.addTrack(res.tracks[0]);
 
         if (!queue.playing) await queue.play();
+/*
+        player.on('trackStart', (queue, track, message) => {
+    
+            // const track = queue.current;
+             
+             //const queue = player.getQueue(message.guild.id);
+             const timestamp = queue.getPlayerTimestamp();
+             const trackDuration = timestamp.progress == 'Infinity' ? 'infinity (live)' : track.duration;
+             const tyt = new MessageEmbed()
+         .setColor('RANDOM')
+         .setDescription(`**NOW PLAYING IN ${queue.connection.channel.name}** <a:kopkop:988045866373877880>`)
+         .addField('**Gaana**', `${track.title}`, true)
+         .addField('**Requester**',`${message.member}`, true)
+         .addField('Duration', `${trackDuration}`, true)
+         .setTimestamp()
+         .setFooter("Made by appy")
+         .setThumbnail('https://i.pinimg.com/originals/71/21/29/712129d48c17029cfd2bd99bf6a4ee10.gif')
+         //.setImage('https://images-ext-2.discordapp.net/external/RbdDCPRH2nNGoJn014CMst8t-p2Pt0vV5Uwr8PYCzHw/https/images-ext-1.discordapp.net/external/4-vz8hiB9HzaMKqpi2oUD0Cx0snxoYMHKvhmxyeTIIY/https/media.discordapp.net/attachments/932610217567473715/946403019489181786/lol.gif');
+         
+             if (!client.config.opt.loopMessage && queue.repeatMode !== 0) return;
+             queue.metadata.send({ embeds: [tyt] });
+             //message.channel.send({ embeds: [tyt] });
+         
+         });*/
+         
     },
 };
