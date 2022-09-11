@@ -20,7 +20,7 @@ player.on('trackStart', (queue, track, message) => {
 .setColor('RANDOM')
 .setDescription(`**NOW PLAYING IN ${queue.connection.channel.name}** <a:kopkop:988045866373877880>`)
 .addField('**Gaana**', `${track.title}`, true)
-.addField('**Requester**',`${message.author.id}`, true)
+//.addField('**Requester**',`${message.author.id}`, true)
 .addField('Duration', `${trackDuration}`, true)
 .setTimestamp()
 .setFooter("Made by appy")
