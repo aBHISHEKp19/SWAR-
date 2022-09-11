@@ -9,11 +9,14 @@
     "start": "node main.js"
   },
   "dependencies": {
+    "@discordjs/opus": "^0.8.0",
+    "discord-music-player": "^9.0.2",
     "discord-player": "^5.2.2",
     "discord.js": "^13.1.0",
     "dotenv": "^16.0.0",
     "ffmpeg-static": "^4.4.0",
     "ms": "^3.0.0-canary.1",
-    "opusscript": "^0.0.8"
+    "opusscript": "^0.0.8",
+    "ytdl-core": "^4.11.1"
   }
 }

@@ -1,7 +1,7 @@
 module.exports = {
     app: {
         px: '>>',
-        token: 'OTcyMTY2NTkxNDczMTU2MDk2.G5mTlp.WOrtVCqaAPs6a3QKHaooUIISp_Lv_bGZDno44s',
+        token: 'OTcyMTY2NTkxNDczMTU2MDk2.GrtUiM.WmGUXBUfUKl1RftV50CRahW1H0ek1wOFVJ_Oug',
        
     },
 
@@ -15,8 +15,10 @@ module.exports = {
         loopMessage: false,
         discordPlayer: {
             ytdlOptions: {
+                filter: "audioonly",
+                opusEncoded: "true",
                 quality: 'highestaudio',
-                highWaterMark: 1 << 25
+                highWaterMark: 1 << 30,
             }
         }
     }

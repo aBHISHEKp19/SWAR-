@@ -29,7 +29,7 @@ player.on('trackStart', (queue, track, message) => {
 
     if (!client.config.opt.loopMessage && queue.repeatMode !== 0) return;
     queue.metadata.send({ embeds: [tyt] });
-    //message.channel.send({ embeds: [tyt] });*/
+    //message.channel.send({ embeds: [tyt] });*/`
 
 });
 
