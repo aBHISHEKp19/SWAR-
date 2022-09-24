@@ -23,7 +23,7 @@ player.on('trackStart', (queue, track, message) => {
 //.addField('**Requester**',`${message.author.id}`, true)
 .addField('Duration', `${trackDuration}`, true)
 .setTimestamp()
-.setFooter("Made by appy")
+//.setFooter("Made by appy")
 .setThumbnail('https://i.pinimg.com/originals/71/21/29/712129d48c17029cfd2bd99bf6a4ee10.gif')
 
 
