@@ -16,6 +16,11 @@ global.client = new Client({
 client.config = require('./config');
 
 client.on('messageCreate', message => {
+
+    if (message.content === prefix + 'stats') {
+        return message.reply(`Server count: ${client.guilds.cache.size}.\nUser count: ${client.users.cache.size} users\nChannels: ${client.channels.cache.size} channels`);
+    }
+
     const args = message.content.slice(prefix.length).split(/ +/);
     if (message.content == prefix + 'av') {
 
